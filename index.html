@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jupiter Dashboard Resources</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background-color: #f4f7f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #005fa3;
+    }
+    .copy-button {
+      padding: 0.6rem 1.2rem;
+      background: #007acc;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    .copy-button:hover {
+      background: #005fa3;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 0.7rem;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .container {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Jupiter Dashboard Resources!</h1>
+    <p>
+      Hey there, dashboard enthusiast! This is your one-stop hub for all things Jupiter – from ultra-cool fee dashboards to top-notch performance analytics. We've curated the best third-party dashboards so you can track, analyze, and geek out over Jupiter protocol data.
+    </p>
+
+    <h2>Share the Love</h2>
+    <p>
+      Spread the word! Click the button below to copy this page's URL and share it with your fellow crypto nerds.
+    </p>
+    <input type="text" id="pageUrl" value="" readonly>
+    <button class="copy-button" onclick="copyUrl()">Click to Copy URL</button>
+
+    <hr>
+
+    <h2>Our Top Picks</h2>
+    <h3>Jupiter Fee Dashboards</h3>
+    <ul>
+      <li>
+        <a href="https://flipsidecrypto.xyz/flyingfish/jupiter-ultra-mode-fees-kOtd0W" target="_blank">
+          Jupiter Ultra Mode Fees
+        </a> – Dive deep into fee tracking with a visually stunning interface.
+      </li>
+    </ul>
+
+    <h3>Analytics & Performance</h3>
+    <ul>
+      <li>
+        <a href="https://dashboards.gauntlet.xyz/protocols/jupiter" target="_blank">
+          Jupiter Analytics Dashboard
+        </a> – Keep an eye on performance metrics, volume, and more.
+      </li>
+    </ul>
+
+    <p>
+      Got a cool dashboard we haven't featured? Drop us a line or contribute via pull request!
+    </p>
+  </div>
+
+  <footer>
+    &copy; 2025 OpenJUP | Made with passion for crypto analytics.
+  </footer>
+
+  <script>
+    // Set the input value to the current URL
+    document.getElementById('pageUrl').value = window.location.href;
+
+    function copyUrl() {
+      var copyText = document.getElementById("pageUrl");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); // For mobile devices
+      document.execCommand("copy");
+      alert("Awesome! The URL has been copied to your clipboard.");
+    }
+  </script>
+</body>
+</html>
